@@ -1,0 +1,66 @@
+{
+    "Appetizers": [
+      { "name": "Misoshiru", "price": 23000 },
+      { "name": "Nori Tempura", "price": 18000 },
+      { "name": "Salmon Karamayo Tamago", "price": 32000 },
+      { "name": "Chawanmushi", "price": 31000 },
+      { "name": "Takoyaki", "price": 35000 },
+      { "name": "Chuka Iidako", "price": 59000 },
+      { "name": "Tamagoyaki", "price": 25000 }
+    ],
+    "HouseSpecialties": [
+      { "name": "Gekkikara Salmon Roll", "price": 80000 },
+      { "name": "Salmon Kabayaki Roll", "price": 45000 },
+      { "name": "Jumbo Dragon Roll", "price": 115000 },
+      { "name": "Aburi Salmon Roll", "price": 112000 },
+      { "name": "Tuna Salad Crispy Mentai", "price": 102000 },
+      { "name": "Salmon Enoki Tempura Roll", "price": 80000 },
+      { "name": "Dynamite Roll", "price": 52000 },
+      { "name": "Salmon Cheese Roll", "price": 85000 },
+      { "name": "Fuji Roll", "price": 48000 },
+      { "name": "Beef Katsu Roll", "price": 51000 },
+      { "name": "Salmon Fried Roll", "price": 48000 }
+    ],
+    "Wagyu": [
+      { "name": "Wagyu Misoyaki", "price": 370000 },
+      { "name": "Wagyu Saikoro Steak", "price": 370000 },
+      { "name": "Wagyu Tataki", "price": 370000 },
+      { "name": "Wagyu Ichimiyaki", "price": 370000 }
+    ],
+    "Salads": [
+      { "name": "Edamame", "price": 25000 },
+      { "name": "Chuka Wakame", "price": 42000 },
+      { "name": "Lobster Salad", "price": 70000 },
+      { "name": "Chicken Teriyaki Salad", "price": 62000 },
+      { "name": "Wakame Salad", "price": 61000 },
+      { "name": "Salmon Sashimi Salad", "price": 94000 }
+    ],
+    "Donmono": [
+      { "name": "Salmon Chahan", "price": 92400 },
+      { "name": "Ebi Ju", "price": 68200 },
+      { "name": "Oyako Ju", "price": 60500 },
+      { "name": "Yakitori Ju", "price": 62700 },
+      { "name": "Chicken Katsu Ju", "price": 66000 },
+      { "name": "Yakiniku Ju", "price": 70400 },
+      { "name": "Curry Rice", "price": 57200 },
+      { "name": "Fried Garlic Rice with Chicken", "price": 53900 },
+      { "name": "Gyu Hitsumabushi", "price": 84700 },
+      { "name": "Tori Karaage Don", "price": 62700 },
+      { "name": "Ten Don", "price": 63800 },
+      { "name": "Salmon Teriyaki Don", "price": 102300 },
+      { "name": "Chicken Karaage Mentai Rice", "price": 55000 },
+      { "name": "Beef Teriyaki Mentai Rice", "price": 58300 },
+      { "name": "Hamayaki Don", "price": 121000 }
+    ],
+    "Beverages": [
+      { "name": "Iced Peach Tea", "price": 27500 },
+      { "name": "Iced Sweet Lychee Tea", "price": 27500 },
+      { "name": "Iced Mango Tea", "price": 27500 },
+      { "name": "Sparkling Passion Fruit Tea", "price": 27500 },
+      { "name": "Iced Green Apple Tea", "price": 27500 },
+      { "name": "Lemongrass Lychee Tea", "price": 27500 },
+      { "name": "Cold Ocha", "price": 7700 },
+      { "name": "Okii Mango Tea", "price": 60500 }
+    ]
+  }
+  

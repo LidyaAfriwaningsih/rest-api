@@ -1,0 +1,31 @@
+[
+    {
+        "nama"  : "Lidya",
+        "umur"  : 21,
+        "nim"   : 2217020009,
+        "lulus" : false,
+        "hobby" : [
+            "coding",
+            "reading"
+        ],
+        "pembimbing"    : {
+            "pembimbing1": "Doddy Ferdiansyah",
+            "pembimbing2": "Erik Doank"
+        }
+    },
+
+    {
+        "nama"  : "Lidya",
+        "umur"  : 21,
+        "nim"   : 2217020009,
+        "lulus" : false,
+        "hobby" : [
+            "coding",
+            "reading"
+        ],
+        "pembimbing"    : {
+            "pembimbing1": "Doddy Ferdiansyah",
+            "pembimbing2": "Erik Doank"
+        }
+    }
+]
