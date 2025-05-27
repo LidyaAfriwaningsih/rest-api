@@ -48,7 +48,7 @@ $latestVideoId = $result ['items'][0]['id']['videoId'];
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#home">Lidya Afriwaningsih</a>
+        <a class="navbar-brand" href="#home">Sandhika Galih</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -69,18 +69,18 @@ $latestVideoId = $result ['items'][0]['id']['videoId'];
     </nav>
 
 
-    <div class="jumbotron" id="home">
-      <div class="container">
-        <div class="text-center">
-          <img src="img/profile1.png" class="rounded-circle img-thumbnail">
-          <h1 class="display-4">Lidya Afriwaningsih</h1>
-          <h3 class="lead">Student | Programmer | Youtuber</h3>
-        </div>
-      </div>
-    </div>
+<!-- Jumbotron -->
+<div class="jumbotron py-5" id="home" style="margin-bottom: 2rem;">
+  <div class="container text-center">
+    <img src="img/profile1.png" class="rounded-circle img-thumbnail mb-3" style="width: 150px; height: 150px;">
+    <h2 class="mb-2">Lidya Afriwaningsih</h2>
+    <h5 class="lead">Student | System Information | 2217020009</h5>
+  </div>
+</div>
 
 
-    <!-- About -->
+
+  <!-- About -->
     <section class="about" id="about">
       <div class="container">
         <div class="row mb-4">
@@ -169,7 +169,8 @@ $latestVideoId = $result ['items'][0]['id']['videoId'];
             <div class="card">
               <img class="card-img-top" src="img/thumbs/1.png" alt="Card image cap">
               <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="card-text">Find your favorite movies and view the details.</p>
+                <a href="search.html" class="btn btn-dark">See Detail</a>
               </div>
             </div>
           </div>
@@ -245,8 +246,8 @@ $latestVideoId = $result ['items'][0]['id']['videoId'];
             
             <ul class="list-group mb-4">
               <li class="list-group-item"><h3>Location</h3></li>
-              <li class="list-group-item">My Office</li>
-              <li class="list-group-item">Jl. Setiabudhi No. 193, Bandung</li>
+              <li class="list-group-item">UIN Imam Bonjol Padang</li>
+              <li class="list-group-item">Sungai Bangek Kel. Balai Gadang Kec Koto Tangah, Padang</li>
               <li class="list-group-item">West Java, Indonesia</li>
             </ul>
           </div>
