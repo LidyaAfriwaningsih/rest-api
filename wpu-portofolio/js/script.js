@@ -4,7 +4,7 @@ $('.nav-link').on('click', function () {
     $(this).addClass('active');
 });
 
-// Fungsi searchMovie sudah sesuai, tidak diubah
+// Fungsi searchMovie
 function searchMovie () {
     $('#movie-list').html('');
     

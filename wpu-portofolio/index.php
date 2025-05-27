@@ -26,6 +26,23 @@ $urlLatestVideo = 'https://www.googleapis.com/youtube/v3/search?key=AIzaSyDXo2Gc
 $result = get_CRUL($urlLatestVideo);
 $latestVideoId = $result ['items'][0]['id']['videoId'];
 
+//PNZ
+$result = get_CRUL('https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&id=UC14ZKB9XsDZbnHVmr4AmUpQ&key=AIzaSyDXo2Gc1w5Gl5zRZnNdQxLHwkybNi0a2vw');
+
+
+
+$youtuProfilePicPZN = $result['items'][0]['snippet']['thumbnails']['medium']['url'];
+
+$channelNamePZN = $result['items'][0]['snippet']['title'];
+
+$subcribersPZN = $result['items'][0]['statistics']['subscriberCount'];
+
+
+//latest video
+$urlPZN = 'https://www.googleapis.com/youtube/v3/search?key=AIzaSyDXo2Gc1w5Gl5zRZnNdQxLHwkybNi0a2vw&channelId=UC14ZKB9XsDZbnHVmr4AmUpQ&maxResults=1&order=date&part=snippet';
+$result = get_CRUL($urlLatestVideo);
+$latestVideoPZN = $result ['items'][0]['id']['videoId'];
+
 ?>
 
 
@@ -45,14 +62,15 @@ $latestVideoId = $result ['items'][0]['id']['videoId'];
     <title>My Portfolio</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav id="mainNavbar" class="navbar navbar-expand-lg bg-dark navbar-dark navbar-dark-theme fixed-top">
       <div class="container">
         <a class="navbar-brand" href="#home">Lidya Afriwaningsih</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
+          <ul class="navbar-nav me-auto">
             <li class="nav-item">
               <a class="nav-link active" href="#home">Home</a>
             </li>
@@ -71,7 +89,7 @@ $latestVideoId = $result ['items'][0]['id']['videoId'];
 <!-- Jumbotron -->
 <div class="jumbotron py-5" id="home" style="margin-bottom: 2rem;">
   <div class="container text-center">
-    <img src="img/profile1.png" class="rounded-circle img-thumbnail mb-3" style="width: 150px; height: 150px;">
+    <img src="img/profile2.png" class="rounded-circle img-thumbnail mb-3" style="width: 150px; height: 150px;">
     <h2 class="mb-2">Lidya Afriwaningsih</h2>
     <h5 class="lead">Student | Information System | 2217020009</h5>
   </div>
@@ -104,7 +122,7 @@ $latestVideoId = $result ['items'][0]['id']['videoId'];
       <div class="container">
         <div class="row pt-4 mb-4">
           <div class="col text-center">
-            <h2>Social Media</h2>
+            <h2>Learning Platform</h2>
           </div>
         </div>
         
@@ -128,30 +146,26 @@ $latestVideoId = $result ['items'][0]['id']['videoId'];
               </div>
             </div>            
           </div>
+
           <div class="col-md-5">
             <div class="row">
               <div class="col-md-4">
-                <img src="img/profile1.png" width="200" class="rounded-circle img-thumbnail">
+                <img src="<?= $youtuProfilePicPZN ?>" width="200" class="rounded-circle img-thumbnail">
               </div>
               <div class="col-md-8">
-                <h5>@sandhikagalih</h5>
-                <p>70000 Followers.</p>
+                <h5><?= $channelNamePZN;?></h5>
+                <p><?= $subcribersPZN?> Subsribers.</p>
+                <div class="g-ytsubscribe" data-channelid="UC14ZKB9XsDZbnHVmr4AmUpQ" data-layout="default" data-count="default"></div>
               </div>
             </div>
             <div class="row mt-3 pb-3">
               <div class="col">
-                <div class="ig-thumbnail">
-                  <img src="img/thumbs/1.png" alt="">
-                </div>
-                <div class="ig-thumbnail">
-                  <img src="img/thumbs/2.png" alt="">
-                </div>
-                <div class="ig-thumbnail">
-                  <img src="img/thumbs/3.png" alt="">
-                </div>
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<?= $latestVideoPZN; ?>?rel=0" allowfullscreen></iframe>
+              </div>
               </div>
             </div>
-          </div>
+          </div>    
       </div>
     </section>
     
@@ -167,7 +181,7 @@ $latestVideoId = $result ['items'][0]['id']['videoId'];
           <div class="col-md-6 col-lg-4 mb-4">
             <div class="card shadow-sm border-0 h-100">
               <div class="position-relative overflow-hidden">
-                <img src="img/thumbs/1.png" class="card-img-top img-fluid hover-zoom" alt="OMDB Movie App">
+                <img src="img/thumbs/6.png" class="card-img-top img-fluid hover-zoom" alt="OMDB Movie App">
                 <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-2">API Project</span>
               </div>
               <div class="card-body d-flex flex-column">

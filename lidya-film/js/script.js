@@ -25,17 +25,6 @@ $(document).ready(function () {
   });
 });
 
-// Smooth scrolling
-$('.navbar-nav .nav-link').on('click', function (e) {
-  if (this.hash !== "") {
-    e.preventDefault();
-    var hash = this.hash;
-    $('html, body').animate({
-      scrollTop: $(hash).offset().top - 70
-    }, 800);
-  }
-});
-
 
 // Fungsi searchMovie sudah sesuai, tidak diubah
 function searchMovie () {
