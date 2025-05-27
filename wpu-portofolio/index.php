@@ -185,7 +185,6 @@ $pznLatestVideo = $data['PNZ']['latestVideoId'];
             <div class="card shadow-sm border-0 h-100">
               <div class="position-relative overflow-hidden">
                 <img src="img/thumbs/6.png" class="card-img-top img-fluid hover-zoom" alt="OMDB Movie App">
-                <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-2">API Project</span>
               </div>
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title">OMDB Movie Finder</h5>
@@ -193,6 +192,24 @@ $pznLatestVideo = $data['PNZ']['latestVideoId'];
                   A simple web application that allows users to search movies using the OMDB API and view their details including posters, years, and more.
                 </p>
                 <a href="search.html" class="btn btn-dark mt-auto d-flex align-items-center justify-content-center gap-2">
+                  <i class="bi bi-film"></i> View Project
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card shadow-sm border-0 h-100">
+              <div class="position-relative overflow-hidden">
+                <img src="img/thumbs/6.png" class="card-img-top img-fluid hover-zoom" alt="OMDB Movie App">
+              </div>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Projek Pizza</h5>
+                <p class="card-text text-muted flex-grow-1">
+                  A simple web application that allows users to search movies using the OMDB API and view their details including posters, years, and more.
+                </p>
+                <a href="pizza.html" class="btn btn-dark mt-auto d-flex align-items-center justify-content-center gap-2">
                   <i class="bi bi-film"></i> View Project
                 </a>
               </div>
