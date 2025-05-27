@@ -1,5 +1,5 @@
 // === Tambahan: Navbar aktif saat diklik ===
-$('.navbarNav').on('click', function () {
+$('.nav-link').on('click', function () {
     $('.nav-link').removeClass('active');
     $(this).addClass('active');
 });
@@ -94,6 +94,7 @@ $('#movie-list').on('click', '.see-detail', function() {
         }
     });
 });
+
 
 
 

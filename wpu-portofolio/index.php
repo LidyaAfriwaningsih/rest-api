@@ -45,7 +45,6 @@ $latestVideoId = $result ['items'][0]['id']['videoId'];
     <title>My Portfolio</title>
   </head>
   <body>
-
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
         <a class="navbar-brand" href="#home">Lidya Afriwaningsih</a>
@@ -55,7 +54,7 @@ $latestVideoId = $result ['items'][0]['id']['videoId'];
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="#home">Home</a>
+              <a class="nav-link active" href="#home">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#about">About</a>
@@ -174,7 +173,7 @@ $latestVideoId = $result ['items'][0]['id']['videoId'];
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title">OMDB Movie Finder</h5>
                 <p class="card-text text-muted flex-grow-1">
-                  A simple web application that allows users to search movies using the OMDB API and view their details including posters, ratings, and more.
+                  A simple web application that allows users to search movies using the OMDB API and view their details including posters, years, and more.
                 </p>
                 <a href="search.html" class="btn btn-dark mt-auto d-flex align-items-center justify-content-center gap-2">
                   <i class="bi bi-film"></i> View Project
@@ -266,5 +265,7 @@ $latestVideoId = $result ['items'][0]['id']['videoId'];
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
     <script src="https://apis.google.com/js/platform.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

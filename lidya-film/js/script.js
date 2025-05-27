@@ -1,8 +1,41 @@
 // === Tambahan: Navbar aktif saat diklik ===
-$('.navbarNav').on('click', function () {
-    $('.nav-link').removeClass('active');
+$(document).ready(function () {
+  // Tambah class 'active' saat klik menu navbar
+  $('.navbar-nav .nav-link').on('click', function () {
+    $('.navbar-nav .nav-link').removeClass('active');
     $(this).addClass('active');
+  });
+
+  // Tambah class 'active' saat scroll halaman
+  $(window).on('scroll', function () {
+    var scrollPos = $(document).scrollTop();
+
+    $('.navbar-nav .nav-link').each(function () {
+      var currLink = $(this);
+      var refElement = $(currLink.attr("href"));
+
+      if (
+        refElement.position().top <= scrollPos + 100 &&
+        refElement.position().top + refElement.height() > scrollPos + 100
+      ) {
+        $('.navbar-nav .nav-link').removeClass("active");
+        currLink.addClass("active");
+      }
+    });
+  });
 });
+
+// Smooth scrolling
+$('.navbar-nav .nav-link').on('click', function (e) {
+  if (this.hash !== "") {
+    e.preventDefault();
+    var hash = this.hash;
+    $('html, body').animate({
+      scrollTop: $(hash).offset().top - 70
+    }, 800);
+  }
+});
+
 
 // Fungsi searchMovie sudah sesuai, tidak diubah
 function searchMovie () {
