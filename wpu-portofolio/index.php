@@ -1,49 +1,52 @@
 <?php
-function get_CRUL($url)
-{
-  $curl = curl_init();
-  curl_setopt($curl, CURLOPT_URL, $url);
-  curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-  $result = curl_exec($curl);
-  curl_close($curl);
-
-  return json_decode($result, true);
+function get_CRUL($url) {
+    $curl = curl_init();
+    curl_setopt_array($curl, [
+        CURLOPT_URL => $url,
+        CURLOPT_RETURNTRANSFER => 1
+    ]);
+    $result = curl_exec($curl);
+    curl_close($curl);
+    return json_decode($result, true);
 }
 
-$result = get_CRUL('https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&id=UCkXmLjEr95LVtGuIm3l2dPg&key=AIzaSyDXo2Gc1w5Gl5zRZnNdQxLHwkybNi0a2vw');
+$apiKey = 'AIzaSyDXo2Gc1w5Gl5zRZnNdQxLHwkybNi0a2vw';
 
+$channels = [
+    'webprogrammingUNPAS' => 'UCkXmLjEr95LVtGuIm3l2dPg',
+    'PNZ' => 'UC14ZKB9XsDZbnHVmr4AmUpQ'
+];
 
+$data = [];
 
-$youtuProfilePic = $result['items'][0]['snippet']['thumbnails']['medium']['url'];
+foreach ($channels as $key => $channelId) {
+    // Data channel
+    $urlChannel = "https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&id=$channelId&key=$apiKey";
+    $channelData = get_CRUL($urlChannel);
 
-$channelName = $result['items'][0]['snippet']['title'];
+    $data[$key]['profilePic'] = $channelData['items'][0]['snippet']['thumbnails']['medium']['url'];
+    $data[$key]['channelName'] = $channelData['items'][0]['snippet']['title'];
+    $data[$key]['subscribers'] = $channelData['items'][0]['statistics']['subscriberCount'];
 
-$subcribers = $result['items'][0]['statistics']['subscriberCount'];
+    // Video terbaru
+    $urlVideo = "https://www.googleapis.com/youtube/v3/search?key=$apiKey&channelId=$channelId&maxResults=1&order=date&part=snippet";
+    $videoData = get_CRUL($urlVideo);
 
+    $data[$key]['latestVideoId'] = $videoData['items'][0]['id']['videoId'];
+}
 
-//latest video
-$urlLatestVideo = 'https://www.googleapis.com/youtube/v3/search?key=AIzaSyDXo2Gc1w5Gl5zRZnNdQxLHwkybNi0a2vw&channelId=UCkXmLjEr95LVtGuIm3l2dPg&maxResults=1&order=date&part=snippet';
-$result = get_CRUL($urlLatestVideo);
-$latestVideoId = $result ['items'][0]['id']['videoId'];
+// Akses data jika dibutuhkan:
+$wpuProfilePic = $data['webprogrammingUNPAS']['profilePic'];
+$wpuName = $data['webprogrammingUNPAS']['channelName'];
+$wpuSubs = $data['webprogrammingUNPAS']['subscribers'];
+$wpuLatestVideo = $data['webprogrammingUNPAS']['latestVideoId'];
 
-//PNZ
-$result = get_CRUL('https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&id=UC14ZKB9XsDZbnHVmr4AmUpQ&key=AIzaSyDXo2Gc1w5Gl5zRZnNdQxLHwkybNi0a2vw');
-
-
-
-$youtuProfilePicPZN = $result['items'][0]['snippet']['thumbnails']['medium']['url'];
-
-$channelNamePZN = $result['items'][0]['snippet']['title'];
-
-$subcribersPZN = $result['items'][0]['statistics']['subscriberCount'];
-
-
-//latest video
-$urlPZN = 'https://www.googleapis.com/youtube/v3/search?key=AIzaSyDXo2Gc1w5Gl5zRZnNdQxLHwkybNi0a2vw&channelId=UC14ZKB9XsDZbnHVmr4AmUpQ&maxResults=1&order=date&part=snippet';
-$result = get_CRUL($urlLatestVideo);
-$latestVideoPZN = $result ['items'][0]['id']['videoId'];
-
+$pznProfilePic = $data['PNZ']['profilePic'];
+$pznName = $data['PNZ']['channelName'];
+$pznSubs = $data['PNZ']['subscribers'];
+$pznLatestVideo = $data['PNZ']['latestVideoId'];
 ?>
+
 
 
 <!doctype html>
@@ -130,18 +133,18 @@ $latestVideoPZN = $result ['items'][0]['id']['videoId'];
           <div class="col-md-5">
             <div class="row">
               <div class="col-md-4">
-                <img src="<?= $youtuProfilePic ?>" width="200" class="rounded-circle img-thumbnail">
+                <img src="<?= $wpuProfilePic ?>" width="200" class="rounded-circle img-thumbnail">
               </div>
               <div class="col-md-8">
-                <h5><?= $channelName;?></h5>
-                <p><?= $subcribers?> Subsribers.</p>
+                <h5><?= $wpuName;?></h5>
+                <p><?= $wpuSubs?> Subsribers.</p>
                 <div class="g-ytsubscribe" data-channelid="UCkXmLjEr95LVtGuIm3l2dPg" data-layout="default" data-count="default"></div>
               </div>
             </div>
             <div class="row mt-3 pb-3">
               <div class="col">
               <div class="embed-responsive embed-responsive-16by9">
-                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<?= $latestVideoId; ?>?rel=0" allowfullscreen></iframe>
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<?= $wpuLatestVideo; ?>?rel=0" allowfullscreen></iframe>
               </div>
               </div>
             </div>            
@@ -150,18 +153,18 @@ $latestVideoPZN = $result ['items'][0]['id']['videoId'];
           <div class="col-md-5">
             <div class="row">
               <div class="col-md-4">
-                <img src="<?= $youtuProfilePicPZN ?>" width="200" class="rounded-circle img-thumbnail">
+                <img src="<?= $pznProfilePic ?>" width="200" class="rounded-circle img-thumbnail">
               </div>
               <div class="col-md-8">
-                <h5><?= $channelNamePZN;?></h5>
-                <p><?= $subcribersPZN?> Subsribers.</p>
+                <h5><?= $pznName;?></h5>
+                <p><?= $pznSubs?> Subsribers.</p>
                 <div class="g-ytsubscribe" data-channelid="UC14ZKB9XsDZbnHVmr4AmUpQ" data-layout="default" data-count="default"></div>
               </div>
             </div>
             <div class="row mt-3 pb-3">
               <div class="col">
               <div class="embed-responsive embed-responsive-16by9">
-                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<?= $latestVideoPZN; ?>?rel=0" allowfullscreen></iframe>
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<?= $pznLatestVideo; ?>?rel=0" allowfullscreen></iframe>
               </div>
               </div>
             </div>
