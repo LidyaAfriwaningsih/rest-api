@@ -48,7 +48,7 @@ $latestVideoId = $result ['items'][0]['id']['videoId'];
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#home">Sandhika Galih</a>
+        <a class="navbar-brand" href="#home">Lidya Afriwaningsih</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -74,7 +74,7 @@ $latestVideoId = $result ['items'][0]['id']['videoId'];
   <div class="container text-center">
     <img src="img/profile1.png" class="rounded-circle img-thumbnail mb-3" style="width: 150px; height: 150px;">
     <h2 class="mb-2">Lidya Afriwaningsih</h2>
-    <h5 class="lead">Student | System Information | 2217020009</h5>
+    <h5 class="lead">Student | Information System | 2217020009</h5>
   </div>
 </div>
 
@@ -90,10 +90,10 @@ $latestVideoId = $result ['items'][0]['id']['videoId'];
         </div>
         <div class="row justify-content-center">
           <div class="col-md-5">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, molestiae sunt doloribus error ullam expedita cumque blanditiis quas vero, qui, consectetur modi possimus. Consequuntur optio ad quae possimus, debitis earum.</p>
+            <p>I am an Information Systems student with a focus on web-based system development, data analysis, and the application of technology to improve business process efficiency. I have experience in designing and implementing digital systems, including a Laravel-based administrative letter system for a government institution. I am also actively involved in academic research that integrates technology with user needs.</p>
           </div>
           <div class="col-md-5">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, molestiae sunt doloribus error ullam expedita cumque blanditiis quas vero, qui, consectetur modi possimus. Consequuntur optio ad quae possimus, debitis earum.</p>
+            <p>I possess skills in system requirements analysis, web programming, technical documentation, and effective team communication. I am committed to continuous learning and growth in the field of information technology, particularly in designing adaptive and user-oriented digital solutions that address real-world challenges.</p>
           </div>
         </div>
       </div>
@@ -165,59 +165,20 @@ $latestVideoId = $result ['items'][0]['id']['videoId'];
           </div>
         </div>
         <div class="row">
-          <div class="col-md mb-4">
-            <div class="card">
-              <img class="card-img-top" src="img/thumbs/1.png" alt="Card image cap">
-              <div class="card-body">
-                <p class="card-text">Find your favorite movies and view the details.</p>
-                <a href="search.html" class="btn btn-dark">See Detail</a>
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card shadow-sm border-0 h-100">
+              <div class="position-relative overflow-hidden">
+                <img src="img/thumbs/1.png" class="card-img-top img-fluid hover-zoom" alt="OMDB Movie App">
+                <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-2">API Project</span>
               </div>
-            </div>
-          </div>
-
-          <div class="col-md mb-4">
-            <div class="card">
-              <img class="card-img-top" src="img/thumbs/2.png" alt="Card image cap">
-              <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md mb-4">
-            <div class="card">
-              <img class="card-img-top" src="img/thumbs/3.png" alt="Card image cap">
-              <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
-            </div>
-          </div>   
-        </div>
-
-        <div class="row">
-          <div class="col-md mb-4">
-            <div class="card">
-              <img class="card-img-top" src="img/thumbs/4.png" alt="Card image cap">
-              <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
-            </div>
-          </div> 
-          <div class="col-md mb-4">
-            <div class="card">
-              <img class="card-img-top" src="img/thumbs/5.png" alt="Card image cap">
-              <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">OMDB Movie Finder</h5>
+                <p class="card-text text-muted flex-grow-1">
+                  A simple web application that allows users to search movies using the OMDB API and view their details including posters, ratings, and more.
                 </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md mb-4">
-            <div class="card">
-              <img class="card-img-top" src="img/thumbs/6.png" alt="Card image cap">
-              <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="search.html" class="btn btn-dark mt-auto d-flex align-items-center justify-content-center gap-2">
+                  <i class="bi bi-film"></i> View Project
+                </a>
               </div>
             </div>
           </div>
