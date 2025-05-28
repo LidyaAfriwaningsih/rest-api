@@ -130,7 +130,7 @@ $pznLatestVideo = $data['PNZ']['latestVideoId'];
         </div>
         
         <div class="row justify-content-center">
-          <div class="col-md-5">
+          <div class="col-md-5 mb-4">
             <div class="row">
               <div class="col-md-4">
                 <img src="<?= $wpuProfilePic ?>" width="200" class="rounded-circle img-thumbnail">
@@ -150,7 +150,7 @@ $pznLatestVideo = $data['PNZ']['latestVideoId'];
             </div>            
           </div>
 
-          <div class="col-md-5">
+          <div class="col-md-5 mb-4">
             <div class="row">
               <div class="col-md-4">
                 <img src="<?= $pznProfilePic ?>" width="200" class="rounded-circle img-thumbnail">
@@ -181,6 +181,7 @@ $pznLatestVideo = $data['PNZ']['latestVideoId'];
           </div>
         </div>
         <div class="row">
+          <!-- Card 1 -->
           <div class="col-md-6 col-lg-4 mb-4">
             <div class="card shadow-sm border-0 h-100">
               <div class="position-relative overflow-hidden">
@@ -197,17 +198,17 @@ $pznLatestVideo = $data['PNZ']['latestVideoId'];
               </div>
             </div>
           </div>
-        </div>
-        <div class="row">
+
+          <!-- Card 2 -->
           <div class="col-md-6 col-lg-4 mb-4">
             <div class="card shadow-sm border-0 h-100">
               <div class="position-relative overflow-hidden">
-                <img src="img/thumbs/6.png" class="card-img-top img-fluid hover-zoom" alt="OMDB Movie App">
+                <img src="img/thumbs/6.png" class="card-img-top img-fluid hover-zoom" alt="Projek Pizza">
               </div>
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title">Projek Pizza</h5>
                 <p class="card-text text-muted flex-grow-1">
-                  A simple web application that allows users to search movies using the OMDB API and view their details including posters, years, and more.
+                  A simple restaurant menu web app that displays pizza items dynamically from a JSON data source. Built using HTML, CSS, JavaScript, and Bootstrap
                 </p>
                 <a href="pizza.html" class="btn btn-dark mt-auto d-flex align-items-center justify-content-center gap-2">
                   <i class="bi bi-film"></i> View Project
@@ -281,7 +282,7 @@ $pznLatestVideo = $data['PNZ']['latestVideoId'];
       <div class="container">
         <div class="row">
           <div class="col text-center">
-            <p>Copyright &copy; 2018.</p>
+            <p>Copyright &copy; 2025.</p>
           </div>
         </div>
       </div>
