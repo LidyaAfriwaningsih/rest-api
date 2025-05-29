@@ -81,6 +81,9 @@ $pznLatestVideo = $data['PNZ']['latestVideoId'];
               <a class="nav-link" href="#about">About</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="#social">Learning Platform</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="#portfolio">Portfolio</a>
             </li>
           </ul>
@@ -211,6 +214,23 @@ $pznLatestVideo = $data['PNZ']['latestVideoId'];
                   A simple restaurant menu web app that displays pizza items dynamically from a JSON data source. Built using HTML, CSS, JavaScript, and Bootstrap
                 </p>
                 <a href="pizza.html" class="btn btn-dark mt-auto d-flex align-items-center justify-content-center gap-2">
+                  <i class="bi bi-film"></i> View Project
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card shadow-sm border-0 h-100">
+              <div class="position-relative overflow-hidden">
+                <img src="img/thumbs/6.png" class="card-img-top img-fluid hover-zoom" alt="rest-server">
+              </div>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Rest Server</h5>
+                <p class="card-text text-muted flex-grow-1">
+                  A simple RESTful API project that manages student (mahasiswa) data using a structured database. Supports standard CRUD operations: GET, POST, PUT, and DELETE. Built with PHP and CodeIgniter 3 REST Server.
+                </p>
+                <a href="rest-server" class="btn btn-dark mt-auto d-flex align-items-center justify-content-center gap-2">
                   <i class="bi bi-film"></i> View Project
                 </a>
               </div>
