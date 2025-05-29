@@ -14,10 +14,10 @@ class mahasiswa extends REST_Controller
         parent::__construct();
         $this->load->model('Mahasiswa_model', 'mahasiswa');
 
-        $this->methods['index_get']['limit'] = 5;
-        $this->methods['index_delete']['limit'] = 2;
-        $this->methods['index_post']['limit'] = 2;
-        $this->methods['index_put']['limit'] = 2;
+        $this->methods['index_get']['limit'] = 20;
+        $this->methods['index_delete']['limit'] = 10;
+        $this->methods['index_post']['limit'] = 10;
+        $this->methods['index_put']['limit'] = 10;
 
     }
 
@@ -58,7 +58,7 @@ class mahasiswa extends REST_Controller
                     'status' => true,
                     'id' => $id,
                     'message' => 'Mahasiswa has been deleted.'
-                ], REST_Controller::HTTP_NO_CONTENT);
+                ], REST_Controller::HTTP_OK);
             } else {
                 $this->response([
                     'status' => false,
@@ -114,7 +114,7 @@ class mahasiswa extends REST_Controller
             $this->response([
                     'status' => true,
                     'message' => 'data mahasiswa has been updated.'
-                ], REST_Controller::HTTP_NO_CONTENT);
+                ], REST_Controller::HTTP_OK);
         } else {
             $this->response([
                     'status' => false,
