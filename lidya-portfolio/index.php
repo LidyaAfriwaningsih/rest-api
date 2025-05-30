@@ -45,6 +45,31 @@ $pznProfilePic = $data['PNZ']['profilePic'];
 $pznName = $data['PNZ']['channelName'];
 $pznSubs = $data['PNZ']['subscribers'];
 $pznLatestVideo = $data['PNZ']['latestVideoId'];
+
+//instagram api
+
+$accessToken = 'IGAAOM2HukWClBZAFBVV1JHMHJjWXB4X1NrVGkyTW41a24wT1ZA4Tjk4UjRoUzNhOG1QOTExNlVmTTREU0p4QXlHQTZAGQm5FYWttM3Ryd25VbHlwdl9UTXpOdU45LXdLQ0kwbTF2b0d3bm5IOUk1a1o3V1dGcFM2NDVTTlBiaXhjbwZDZD';
+
+$result = get_CRUL('https://graph.instagram.com/v22.0/me?fields=username,profile_picture_url,followers_count&access_token=IGAAOM2HukWClBZAFBVV1JHMHJjWXB4X1NrVGkyTW41a24wT1ZA4Tjk4UjRoUzNhOG1QOTExNlVmTTREU0p4QXlHQTZAGQm5FYWttM3Ryd25VbHlwdl9UTXpOdU45LXdLQ0kwbTF2b0d3bm5IOUk1a1o3V1dGcFM2NDVTTlBiaXhjbwZDZD');
+
+$usernameIG = $result['username'];
+$profilePic = $result['profile_picture_url'];
+$followers = $result['followers_count'];
+$userId = $result['id'];
+$mediaId1 = '18062655548162814'; 
+$mediaId2 = '18509671660046340';
+$mediaId3 = '18065222390079405';
+
+
+$mediaInfo1 = get_CRUL("https://graph.instagram.com/v22.0/$mediaId1?fields=media_url&access_token=$accessToken");
+$mediaInfo2 = get_CRUL("https://graph.instagram.com/v22.0/$mediaId2?fields=media_url&access_token=$accessToken");
+$mediaInfo3 = get_CRUL("https://graph.instagram.com/v22.0/$mediaId3?fields=media_url&access_token=$accessToken");
+
+$postImageUrl1 = $mediaInfo1['media_url'];
+$postImageUrl2 = $mediaInfo2['media_url'];
+$postImageUrl3 = $mediaInfo3['media_url'];
+
+
 ?>
 
 
@@ -171,10 +196,42 @@ $pznLatestVideo = $data['PNZ']['latestVideoId'];
               </div>
               </div>
             </div>
-          </div>    
+          </div>
       </div>
     </section>
-    
+
+    <section class="ig bg-light" id="ig">
+      <div class="container">
+        <div class="row pt-4 mb-4">
+          <div class="col text-center">
+            <h2>Find Me</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-5">
+            <div class="row justify-content-center align-items-center">
+              <div class="col-md-4 text-center">
+                <img src="<?= $profilePic ?>" width="200" class="rounded-circle img-thumbnail" alt="Instagram Profile Picture">
+              </div>
+              <div class="col-md-8">
+                <h5>@<?= $usernameIG ?></h5>
+                <p><?= number_format($followers) ?> Followers.</p>
+              </div>
+            </div>
+            <div class="row mt-3 pb-3 justify-content-center">
+              <div class="col text-center">
+                <img src="<?= $postImageUrl1 ?>" class="ig-thumbnail mx-1" style="max-width: 100px;">
+                <img src="<?= $postImageUrl2 ?>" class="ig-thumbnail mx-1" style="max-width: 100px;">
+                <img src="<?= $postImageUrl3 ?>" class="ig-thumbnail mx-1" style="max-width: 100px;">
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
     <!-- Portfolio -->
     <section class="portfolio" id="portfolio">
       <div class="container">
